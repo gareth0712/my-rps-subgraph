@@ -1,22 +1,28 @@
 {
-  "name": "my-subgraph",
+  "name": "my-rps-subgraph",
   "version": "1.0.0",
   "description": "Deploy my own Subgraph for indexing data of Ethereum Network",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gareth0712/my-subgraph.git"
+    "url": "git+https://github.com/gareth0712/my-rps-subgraph.git"
   },
   "author": "Gareth Lau",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/gareth0712/my-subgraph/issues"
+    "url": "https://github.com/gareth0712/my-rps-subgraph/issues"
   },
-  "homepage": "https://github.com/gareth0712/my-subgraph#readme",
+  "homepage": "https://github.com/gareth0712/my-rps-subgraph#readme",
+  "scripts": {
+    "codegen": "graph codegen",
+    "build": "graph build",
+    "deploy": "graph deploy --node https://api.studio.thegraph.com/deploy/ my-rps-subgraph",
+    "create-local": "graph create --node http://localhost:8020/ my-rps-subgraph",
+    "remove-local": "graph remove --node http://localhost:8020/ my-rps-subgraph",
+    "deploy-local": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 my-rps-subgraph"
+  },
   "dependencies": {
-    "@graphprotocol/graph-cli": "^0.22.4"
+    "@graphprotocol/graph-cli": "^0.22.4",
+    "@graphprotocol/graph-ts": "0.22.1"
   }
 }

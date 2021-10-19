@@ -1,3 +1,5 @@
 {
-  "link": "https://thegraph.com/studio/subgraph/my-rps-subgraph/"
+  "link": "https://thegraph.com/studio/subgraph/my-rps-subgraph/",
+  "contractAddress": "0x52a16Aaa6C249e781C83bfc586fd91b147e9323d",
+  "contractName": "RpsAdvanced"
 }
